@@ -14,7 +14,7 @@
         <section>
             <h6>小算盤</h6>
             <div class="clearfix">
-                <h2>15</h2>
+                <h2 id="output">0</h2>
             </div>
             <div class="buttons">
                 <div class="membery">
@@ -25,39 +25,39 @@
                     <button class="ms">MS</button>
                 </div>
                 <div class="methods">
-                    <button class="percent">%</button>
-                    <button class="sqrt">√</button>
-                    <button class="pow">x<sup>2</sup></button>
-                    <button class="1/x">1/x</button>
+                    <button class="percent" onclick="percent()">%</button>
+                    <button class="sqrt" onclick="tosqrt()">√</button>
+                    <button class="pow" onclick="square()">x<sup>2</sup></button>
+                    <button class="1/x" onclick="recip()">1/x</button>
                 </div>
                 <div class="bottomcalc">
                     <div class="left">
                         <div class="clean">
-                            <button class="ce">CE</button>
-                            <button class="c">C</button>
-                            <button class="shift">&lt=</button>
+                            <button class="ce" onclick="clearError()">CE</button>
+                            <button class="c" onclick="clearAll()">C</button>
+                            <button class="shift" onclick="shiftstr()">&lt=</button>
                         </div>
                         <div class="numbers">
-                            <button class="7">7</button>
-                            <button class="8">8</button>
-                            <button class="9">9</button>
-                            <button class="4">4</button>
-                            <button class="5">5</button>
-                            <button class="6">6</button>
-                            <button class="1">1</button>
-                            <button class="2">2</button>
-                            <button class="3">3</button>
-                            <button class="signsymbol">±</button>
-                            <button class="0">0</button>
-                            <button class="dot">．</button>
+                            <button class="7" onclick="stor(7)">7</button>
+                            <button class="8" onclick="stor(8)">8</button>
+                            <button class="9" onclick="stor(9)">9</button>
+                            <button class="4" onclick="stor(4)">4</button>
+                            <button class="5" onclick="stor(5)">5</button>
+                            <button class="6" onclick="stor(6)">6</button>
+                            <button class="1" onclick="stor(1)">1</button>
+                            <button class="2" onclick="stor(2)">2</button>
+                            <button class="3" onclick="stor(3)">3</button>
+                            <button class="signsymbol" onclick="sign()">±</button>
+                            <button class="0" onclick="stor(0)">0</button>
+                            <button class="dot" onclick="stor('.')">．</button>
                         </div>
                     </div>
                     <div class="right">
-                        <button class="divided">÷</button>
-                        <button class="mutiplied">X</button>
-                        <button class="minus">-</button>
-                        <button class="add">+</button>
-                        <button class="equal">=</button>
+                        <button class="divided" onclick="method('/')">÷</button>
+                        <button class="mutiplied" onclick="method('x')">X</button>
+                        <button class="minus" onclick="method('-')">-</button>
+                        <button class="add" onclick="method('+')">+</button>
+                        <button class="equal" onclick="equal()">=</button>
                     </div>
                 </div>
             </div>

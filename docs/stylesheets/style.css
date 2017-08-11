@@ -10,14 +10,16 @@ html,body{
 body{
     display: flex;
     align-items: center;
-    background-color: #ccc;
+    background-color: #333;
 }
 section{
     width:100%;
-    max-width: 600px;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
     border: solid 1px;
+    padding: 15px;
+    background-color: #ccc;
 }
 section h6{
     padding: 5px;
@@ -32,9 +34,9 @@ section h2{
 }
 .clearfix{
     overflow: auto;
-}
-.buttons{
-    padding: 5px;
+    border: solid 1px;
+    box-sizing: border-box;
+    margin: 10px 2px;
 }
 .membery,.methods,.clean,.bottomcalc{
     display: flex;
