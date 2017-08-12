@@ -171,5 +171,18 @@ window.addEventListener("keydown",function(key){
             default:
         }
     }    
-    console.log(key);
+});
+
+//使用JQERY 點擊按鈕動畫
+$(document).ready(function(){
+    $("button").mousedown(function(){
+        $(this).removeClass("mousedown");
+        $(this).removeClass("mouseup");
+        $(this).addClass("mousedown");
+    });
+    $("button").mouseup(function(){
+        $(this).removeClass("mousedown");
+        $(this).removeClass("mouseup");
+        $(this).addClass("mouseup");
+    });    
 });

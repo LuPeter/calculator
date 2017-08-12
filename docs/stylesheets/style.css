@@ -1,7 +1,7 @@
 *{  
     padding: 0;
     margin: 0;
-    font-family: 微軟正黑體;
+    font-family: 'Signika', sans-serif;
 }
 html,body{
     width: 100%;
@@ -10,20 +10,23 @@ html,body{
 body{
     display: flex;
     align-items: center;
-    background-color: #333;
+    background-color: #BDCFD9;
 }
 section{
     width:100%;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-    border: solid 1px;
+    border-radius: 10px;
+    box-shadow: -2px 2px 5px;
     padding: 15px;
-    background-color: #ccc;
+    background-color: #2F546E;
 }
 section h6{
-    padding: 5px;
-    font-size: 12px;
+    padding: 3px;
+    font-size: 15px;
+    color: white;
+    cursor: default;
 }
 section h2{
     float: right;
@@ -31,12 +34,16 @@ section h2{
     padding: 3px 10px;
     font-size: 30px;
     font-weight: 800;
+    color: white;
+    cursor: default;
 }
 .clearfix{
     overflow: auto;
-    border: solid 1px;
     box-sizing: border-box;
+    /*border: solid 3px #ccc;*/
+    border-radius: 3px;
     margin: 10px 2px;
+    background-color: #08000D;
 }
 .membery,.methods,.clean,.bottomcalc{
     display: flex;
@@ -45,10 +52,25 @@ section h2{
     width: 100%;
 }
 button{
-    margin: 2px;
+    margin: 4px 2px;
     padding: 10px;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
+    background-color: #08000D;
+    border: none;
+    border-radius: 4px;
+    box-shadow: -2px 2px 2px #333;
+    color:white;
+    transition-duration: 0.3s;
+    cursor:pointer;
+}
+button:hover{
+    background-color:white;
+    color: #08000D;
+    transition-duration: 0.3s;
+}
+button:focus {
+    outline:0;
 }
 .membery button{
     width: calc(100% / 5);
@@ -77,4 +99,30 @@ button{
 }
 .right button{
     width: calc(100% - 4px);
+}
+
+/*for animation*/
+.mousedown{
+    animation: downAnimate 0.2s ;
+    animation-fill-mode: forwards;
+}
+.mouseup{
+    animation: upAnimate 0.2s;
+    animation-fill-mode: forwards;
+}
+@keyframes downAnimate{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.9);
+    }
+}
+@keyframes upAnimate{
+    0%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
