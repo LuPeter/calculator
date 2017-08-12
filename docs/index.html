@@ -18,11 +18,11 @@
             </div>
             <div class="buttons">
                 <div class="membery">
-                    <button class="mc">MC</button>
-                    <button class="mr">MR</button>
-                    <button class="m+">M+</button>
-                    <button class="m-">M-</button>
-                    <button class="ms">MS</button>
+                    <button class="mc" onclick="mClean()">MC</button>
+                    <button class="mr" onclick="mRecall()">MR</button>
+                    <button class="m+" onclick="mAdd()">M+</button>
+                    <button class="m-" onclick="mMinus()">M-</button>
+                    <button class="ms" onclick="mS()">MS</button>
                 </div>
                 <div class="methods">
                     <button class="percent" onclick="percent()">%</button>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="right">
                         <button class="divided" onclick="method('/')">÷</button>
-                        <button class="mutiplied" onclick="method('x')">X</button>
+                        <button class="mutiplied" onclick="method('*')">X</button>
                         <button class="minus" onclick="method('-')">-</button>
                         <button class="add" onclick="method('+')">+</button>
                         <button class="equal" onclick="equal()">=</button>

@@ -1,6 +1,7 @@
 var str=""; //暫存輸入的值(string)
 var op="+";  //暫存oprator
 var number=0;
+var membery=0;
 //存取數值
 function stor(i){
     str+=i;
@@ -25,7 +26,7 @@ function method(operator){
                 number-=Number(str);
                 console.log(number);
                 break;
-            case 'x':
+            case '*':
                 (number==0)?number=Number(str):number*=Number(str);
                 console.log(number);
                 break;
@@ -111,3 +112,64 @@ function percent(){
         equal();
     }
 }
+//MR
+function mRecall(){
+    str=membery.toString();
+    document.getElementById("output").innerHTML= str;
+    str='';
+}
+//MC
+function mClean(){
+    membery=0;
+}
+//M+
+function mAdd(){
+    if(str==""){
+        membery+=number;
+    }
+    else{
+        membery+=Number(str);
+    }    
+    str=""; 
+}
+//M-
+function mMinus(){
+    if(str==""){
+        membery-=number;
+    }
+    else{
+        membery-=Number(str);
+    }    
+    str=""; 
+}
+//MS
+function mS(){
+    membery=Number(str);
+}
+
+//鍵盤輸入
+window.addEventListener("keydown",function(key){
+    if(key.keyCode>=96 && key.keyCode<=105){
+        stor(key.key);
+    }  
+    else if(key.keyCode>=106 && key.keyCode<= 111 && key.keyCode!=110){        
+        method(key.key);
+    }
+    else{
+        switch(key.keyCode){
+            case 110:
+                stor(key.key);
+                break;
+            case 13:
+                equal();
+                break;
+            case 27:
+                clearAll();
+                break;
+            case 8:
+                shiftstr();
+            default:
+        }
+    }    
+    console.log(key);
+});
